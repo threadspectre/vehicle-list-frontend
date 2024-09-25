@@ -120,7 +120,7 @@ function ManufacturerList({ manufacturers }: ManufacturerListProps) {
 function Vehicle ({Id, ShortName, FullName, Country}:ManufacturerProps){
   const [toggled, setToggled] = useState<boolean>(false);
   return (
-    <div className="flex flex-col bg-white shadow-md rounded-lg min-w-[200px] mb-5 p-5 cursor-pointer" onClick={(e) => setToggled((v) => !v)}>
+    <div className="flex flex-col bg-white shadow-md rounded-lg min-w-[200px] mb-5 p-5 cursor-pointer" onClick={() => setToggled((v) => !v)}>
       <div className="text-sm font-semibold text-black mb-2">
         {Id === -2 ? "NULL": Id}
       </div>
