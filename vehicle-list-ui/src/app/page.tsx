@@ -25,7 +25,7 @@ interface ManufacturerListProps {
 }
 
 function VehicleList (){
-  const { data, error, isLoading } = useSWR("http://35.193.215.175:5000//vehicles", fetcher);
+  const { data, error, isLoading } = useSWR("http://35.193.215.175:5000/vehicles", fetcher);
   return (
     <div className="mt-5 flex justify-between flex-row">
       {!error && !isLoading && data && data.length > 0 && data.map((vehicleType, index) => {
